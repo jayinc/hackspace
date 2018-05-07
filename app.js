@@ -45,6 +45,8 @@ function handlePost(request, response)
   cb = new Callback();
   cb.app = app;
   getFromVHS(cb);
+
+  return cb.getPromise();
  }
 
  // Handles the query intent - next event is when?
@@ -58,6 +60,7 @@ function handlePost(request, response)
   card = app.buildBasicCard();
   card.setTitle('Vancouver Hack Space')
       .setSubtitle('Upcoming Events')
+      .setBodyText('-----------------')
       .addButton('View', 'http://vanhack.ca/wp/events-calendar/');
 
   response = app.buildRichResponse();
