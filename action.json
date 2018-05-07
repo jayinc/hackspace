@@ -1,0 +1,49 @@
+{
+ "actions":
+ [
+  {
+   "description": "Default Welcome Intent",
+   "name": "MAIN",
+   "fulfillment":
+   {
+    "conversationName": "convo"
+   },
+   "intent":
+   {
+    "name": "actions.intent.MAIN",
+    "trigger":
+    {
+     "queryPatterns":
+     [
+      "talk to hack space"
+     ]
+    }
+   }
+  },
+  {
+   "description": "Events Query",
+   "name": "Events Query",
+   "fulfillment": { "conversationName": "convo" },
+   "intent":
+   {
+    "name": "Events Query",
+    "trigger":
+    {
+     "queryPatterns":
+     [
+      "when is the next event"
+     ]
+    }
+   }
+  }
+ ],
+ "conversations":
+ {
+  "convo":
+  {
+   "name": "convo",
+   "url": "https://f074a610.ngrok.io"
+  }
+ },
+ "locale": "en"
+}
